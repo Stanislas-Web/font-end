@@ -33,11 +33,12 @@ const ModalExampleScrollingContent = () => {
 
 
   const getData = ()=>{
-    // axios.get(`https://us-central1-apitest-edb81.cloudfunctions.net/api/messages`)
-    // .then(res => {
-    //   setMessages(res.data);
-    // })
-    setOpen(true);
+    axios.get(`https://us-central1-apitest-edb81.cloudfunctions.net/api/messages`)
+    .then(res => {
+      setMessages(res.data);
+      setOpen(true);
+    })
+    
   }
 
   return (
