@@ -5,6 +5,8 @@ import img from '../assets/imgmessage.png';
 import styled from 'styled-components';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LottieAnimation from './LottieAnimation';
+import post from './post.json';
 
 toast.configure();
 const ErrorLine = styled.p`
@@ -59,7 +61,7 @@ function ModalExampleModal() {
     >
       <Modal.Header>Send Message</Modal.Header>
       <Modal.Content image>
-        <Image size='medium' src={img} wrapped />
+        <LottieAnimation lotti={post} height={300} width={300} />  
         <Modal.Description>
 
           <Form>
